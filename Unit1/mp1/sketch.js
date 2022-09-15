@@ -184,12 +184,7 @@ function draw() {
   else {
     
   }
-    
- 
-    text(mouseX + "," + mouseY, 20,20) ;
   
   }
-   function mouseReleased (){
-    print(mouseX + "," + mouseY, 20,20) ;
-  }
+  
   
