@@ -54,19 +54,18 @@ function draw() {
       game();
       
       timer++;
-      if (timer > 15 * 60) {
+      if (timer > 5 * 60) {
         timer = 0;
         state = 3;
       }
       break;
 
     case 2: //win
-      image(win, width / 2, height / 2);
+      image(win, windowWidth, windowHeight);
       resetGame();
       break;
 
     case 3: //lose
-      image(win, width / 2, height / 2);
       resetGame();
       break;
   }
@@ -80,6 +79,7 @@ function resetGame() {
     cars.push(new Car());
   }
   timer = 0;
+  state = 0;
 }
 
 function mouseReleased() {
