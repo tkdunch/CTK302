@@ -107,7 +107,7 @@ function game() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  image(bhole, 50, 50);
+  image(bhole, 5, 5);
   pop();
 
   // update the frog's position using the accelerometer data
@@ -190,10 +190,11 @@ function Car() {
   // methods
   this.display = function () {
     // maybe use an image here instead!
-    fill(this.r, this.g, this.b, this.a);
-    ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    ellipse(this.pos.x + 50, this.pos.y, 50, 50);
-    rect(this.pos.x + 17, this.pos.y - 30, 80, 60);
+    image(planet1, this.pos.x, this.pos.y, 5,5);
+    // fill(this.r, this.g, this.b, this.a);
+    // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
+    // ellipse(this.pos.x + 50, this.pos.y, 50, 50);
+    // rect(this.pos.x + 17, this.pos.y - 30, 80, 60);
   };
 
   this.drive = function () {
