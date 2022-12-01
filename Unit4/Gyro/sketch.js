@@ -52,6 +52,12 @@ function draw() {
 
     case 1:
       game();
+      
+      timer++;
+      if (timer > 15 * 60) {
+        timer = 0;
+        state = 3;
+      }
       break;
 
     case 2: //win
@@ -92,7 +98,7 @@ function mouseReleased() {
   }
 }
 function game() {
-  image(bg1, windowWidth, windowHeight); 
+  image(bg1, windowWidth, windowHeight);
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -106,8 +112,7 @@ function game() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  // image(bunnyImage, 0, 0, 500, 500);
-  image(bhole, 0, 0, 100, 100);
+  image(bhole, 0, 0, 300, 300);
   pop();
 
   // update the frog's position using the accelerometer data
@@ -118,7 +123,7 @@ function game() {
   for (var i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].drive();
-    if (cars[i].pos.dist(frogPos) < 10) {
+    if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
     }
   }
@@ -193,8 +198,8 @@ function Car() {
   // methods
   this.display = function () {
     // maybe use an image here instead!
-    image(planet1, this.pos.x, this.pos.y, 75,75);
-   
+    image(planet1, this.pos.x, this.pos.y, 150, 150);
+
     // fill(this.r, this.g, this.b, this.a);
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
     // ellipse(this.pos.x + 50, this.pos.y, 50, 50);
