@@ -118,7 +118,7 @@ function game() {
   for (var i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].drive();
-    if (cars[i].pos.dist(frogPos) < 50) {
+    if (cars[i].pos.dist(frogPos) < 10) {
       cars.splice(i, 1);
     }
   }
@@ -191,7 +191,7 @@ function Car() {
   this.display = function () {
     // maybe use an image here instead!
     image(planet1, this.pos.x, this.pos.y, 25,25);
-    image(planet2, this.pos.x, this.pos.y, 25, 25);
+   
     // fill(this.r, this.g, this.b, this.a);
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
     // ellipse(this.pos.x + 50, this.pos.y, 50, 50);
