@@ -92,7 +92,7 @@ function mouseReleased() {
   }
 }
 function game() {
-  background(bg1, width/2, height/2); // light blue
+  image(bg1, width, height); 
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -107,8 +107,7 @@ function game() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  fill("green");
-  ellipse(0, 0, 80, 80);
+  image(bhole, 50, 50);
   pop();
 
   // update the frog's position using the accelerometer data
