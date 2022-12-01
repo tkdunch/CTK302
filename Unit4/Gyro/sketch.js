@@ -9,6 +9,7 @@ var xPosition = 0;
 var yPosition = 0;
 let state = 0;
 let timer = 0;
+let bg1, bhole, planet1, planet2, win, lose;
 
 // var bunnyImage;
 var cars = [];
@@ -16,6 +17,12 @@ var frogPos;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
+  bg1 = loadImage("assets/bg1.png");
+  bhole = loadImage("assets/bhole.png");
+  planet1 = loadImage("assets/planet1.png");
+  planet2 = loadImage("assets/planet2.png");
+  win = loadImage("assets/win.png");
 
   // initialize accelerometer variables
   alpha = 0;
@@ -85,7 +92,7 @@ function mouseReleased() {
   }
 }
 function game() {
-  background("#c6f5ff"); // light blue
+  background(bg1, width/2, height/2); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
