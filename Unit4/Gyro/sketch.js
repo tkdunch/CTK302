@@ -107,7 +107,7 @@ function game() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  image(bhole, 0, 0, 25, 25);
+  image(bhole, 0, 0, 100, 100);
   pop();
 
   // update the frog's position using the accelerometer data
@@ -121,6 +121,9 @@ function game() {
     if (cars[i].pos.dist(frogPos) < 10) {
       cars.splice(i, 1);
     }
+  }
+  if (cars.length == 0) {
+    state = 2;
   }
 }
 // // MORE DECORATIONS - write that pretty ATK type on top.
@@ -190,7 +193,7 @@ function Car() {
   // methods
   this.display = function () {
     // maybe use an image here instead!
-    image(planet1, this.pos.x, this.pos.y, 25,25);
+    image(planet1, this.pos.x, this.pos.y, 75,75);
    
     // fill(this.r, this.g, this.b, this.a);
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
