@@ -55,12 +55,12 @@ function draw() {
       break;
 
     case 2: //win
-      background("green");
+      image(win, width / 2, height / 2);
       resetGame();
       break;
 
     case 3: //lose
-      background("red");
+      image(win, width / 2, height / 2);
       resetGame();
       break;
   }
@@ -92,7 +92,7 @@ function mouseReleased() {
   }
 }
 function game() {
-  image(bg1, width, height); 
+  image(bg1, windowWidth, windowHeight); 
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
