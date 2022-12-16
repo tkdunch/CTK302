@@ -66,6 +66,7 @@ function draw() {
       break;
 
     case 3: //lose
+    background("black");
       resetGame();
       break;
   }
@@ -112,7 +113,7 @@ function game() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(bhole, 0, 0, 300, 300);
+  image(bhole, 0, 0, 200, 200);
   pop();
 
   // update the frog's position using the accelerometer data
@@ -190,16 +191,16 @@ function Car() {
   // attributes
   this.pos = createVector(100, 100);
   this.vel = createVector(random(-5, 5), random(-5, 5));
-  this.r = random(255);
-  this.g = random(255);
-  this.b = random(255);
-  this.a = random(255); // alpha opacity value for fill!
+  // this.r = random(255);
+  // this.g = random(255);
+  // this.b = random(255);
+  // this.a = random(255); // alpha opacity value for fill!
+  this.img = planet1
 
   // methods
   this.display = function () {
     // maybe use an image here instead!
-    image(planet1, this.pos.x, this.pos.y, 150, 150);
-
+  image(this.img, this.pos.x, this.pos.y, 150, 150);
     // fill(this.r, this.g, this.b, this.a);
     // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
     // ellipse(this.pos.x + 50, this.pos.y, 50, 50);
